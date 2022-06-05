@@ -1,4 +1,5 @@
 <script setup>
+import { readUrl } from '@/config/URIPath';
 import PostTitle from '@/components/posts/PostTitle.vue';
 import { onBeforeMount, ref, computed } from 'vue';
 import { useRoute } from 'vue-router'
@@ -14,7 +15,7 @@ const deneme = computed(() => {
 
 onBeforeMount(async () => {
     try {
-        await fetch('http://127.0.0.1:5000/post/' + route.params.id)
+        await fetch(readUrl + route.params.id)
             .then(response => response.json())
             .then(json => post.value = json);
     } catch (error) {

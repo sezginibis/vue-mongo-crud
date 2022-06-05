@@ -1,6 +1,8 @@
 <script setup>
 import PostTitle from '@/components/posts/PostTitle.vue';
 import { reactive, ref } from 'vue';
+import { createUrl, pathMain } from '@/config/URIPath';
+
 
 const post = reactive({
     _id: '',
@@ -8,6 +10,7 @@ const post = reactive({
     description: ''
 });
 
+const postEnv = process.env.VUE_BACKEND_POSTS_URI;
 const title = ref('This is an post create page');
 
 async function postSave() {
@@ -21,10 +24,10 @@ async function postSave() {
         body: JSON.stringify(data)
     };
     // console.log(requestOptions);
-    await fetch("http://127.0.0.1:5000/posts", requestOptions)
+    await fetch(createUrl, requestOptions)
     .then(response => {
         response.json()
-        window.location.href = '/posts';
+        window.location.href = `${pathMain}posts`;
     })
     .then(json => post.value = json);
 }

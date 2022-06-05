@@ -1,4 +1,5 @@
 <script setup>
+import { readUrl, createUrl } from '@/config/URIPath';
 import PostCreateVue from './PostCreate.vue';
 import { onBeforeMount, ref } from 'vue';
 
@@ -7,7 +8,7 @@ const post = ref([]);
 
 onBeforeMount(async () => {
     try {
-        await fetch('http://127.0.0.1:5000/posts')
+        await fetch(createUrl)
             .then(response => response.json())
             .then(json => posts.value = json);
     } catch (error) {
@@ -17,7 +18,7 @@ onBeforeMount(async () => {
 
 async function postView(id) {
     try {
-        await fetch('http://127.0.0.1:5000/post/' + id)
+        await fetch(readUrl + id)
             .then(response => response.json())
             .then(json => post.value = json);
     } catch (error) {
