@@ -38,6 +38,7 @@ Unfortunately Vue-Cli is slow. Also, it is no longer supported. However, when yo
  - User login and authorization must be done for the backend. Unfortunately not yet.
 
 ### For frontend setup
+* `src/config/URIPath.js` file in URI change
 * `npm install`
 * `npm run serve`
 
