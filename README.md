@@ -1,6 +1,6 @@
 # A simple CRUD application.
 ## Back-end API
-The backend of the application is written in Express using the [MongoDB](https://www.mongodb.com/) database. It is located in the Express backend `01-backend-mongo` folder. 
+The backend of the application is written in Express using the [MongoDB](https://www.mongodb.com/) Compass database. It is located in the Express backend `01-backend-mongo` folder. 
 In addition to express;
 * [dotenv](https://www.npmjs.com/package/dotenv)
 * [cors](https://www.npmjs.com/package/cors)
@@ -12,7 +12,7 @@ In addition to express;
 modules are used.
 
 ## Warning:
-This branch **does not have dotenv installed** for frontend. Therefore, you should not touch .env paths in the backend. If you are using Atlas instead of MongoDB Compass, then you must manually assign this URL address in the `src/component` all files in the `02-vue-frontend` folder. This situation is currently being fixed and will be released in the second branch.
+You might be using atlas instead of mongodb compass. Before all operations, make sure to change the settings in the `.env` file on the backend and the settings in the `src/config/URIPath.js` file on the frontend for the frontend.
 
 ### For backend setup
 * Declare the required MongoDB URI in the `.env` file.
