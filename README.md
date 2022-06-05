@@ -1,6 +1,7 @@
 # A simple CRUD application.
 ## Back-end API
-The backend of the application is written in Express using the [MongoDB](https://www.mongodb.com/) Compass database. It is located in the Express backend `01-backend-mongo` folder. 
+The backend of the application is written in Express using the [MongoDB](https://www.mongodb.com/) Compass database. It is located in the Express backend `01-backend-mongo` folder. The repo is located at [sezginibis/vue-mongo-crud](https://github.com/sezginibis/vue-mongo-crud)
+
 In addition to express;
 * [dotenv](https://www.npmjs.com/package/dotenv)
 * [cors](https://www.npmjs.com/package/cors)
