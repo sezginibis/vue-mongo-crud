@@ -11,6 +11,9 @@ In addition to express;
 
 modules are used.
 
+## Warning:
+This branch **does not have dotenv installed** for frontend. Therefore, you should not touch .env paths in the backend. If you are using Atlas instead of MongoDB Compass, then you must manually assign this URL address in the `src/router/index.js` and `src/view` and `src/component` files in the `02-vue-frontend` folder.
+
 ### For backend setup
 * Declare the required MongoDB URI in the `.env` file.
 * `npm install`
