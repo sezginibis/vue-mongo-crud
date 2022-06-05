@@ -1,7 +1,6 @@
 <script setup>
-import { readUrl, createUrl } from '@/config/URIPath';
-import PostCreateVue from './PostCreate.vue';
-import { onBeforeMount, ref } from 'vue';
+import { readUrl, createUrl, pathMain } from '@/config/URIPath';
+import { onBeforeMount, ref, computed } from 'vue';
 
 const posts = ref([]);
 const post = ref([]);
@@ -24,10 +23,6 @@ async function postView(id) {
     } catch (error) {
         console.log(error);
     }
-}
-
-function boxOpen() {
-
 }
 
 </script>
@@ -102,7 +97,7 @@ function boxOpen() {
                 </tr>
             </template>
             <tr v-else>
-                <td colspan="4"><PostCreateVue /></td>
+                <td colspan="4">No posts</td>
             </tr>
         </tbody>
     </table>
