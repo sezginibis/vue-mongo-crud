@@ -33,3 +33,6 @@ Vue 3 is used for front-end. Fetch is used to call backend API data. The homepag
 * `npm run serve`
 
 I hope it will be a useful example for your education.
+
+## ScreenShot
+![ProjectScreenShot](https://user-images.githubusercontent.com/34094261/172047357-3d03ba1a-4ea6-4cd8-9f7e-74ee58130131.png)
